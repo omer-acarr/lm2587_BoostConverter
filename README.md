@@ -1,42 +1,45 @@
-LM2587 DC-DC Boost Converter Design
-This project contains the complete design files for a high-efficiency DC-DC Boost Converter based on the Texas Instruments LM2587 Simple Switcher® flyback regulator. The design has been developed using Altium Designer, focusing on power integrity, thermal management, and compact PCB layout.
+# LM2587 DC-DC Boost Converter Design
 
-🛠 Technical Specifications
-The LM2587 is a monolithic integrated circuit that provides all of the active functions for step-up (boost), flyback, and forward converter switching regulators.
+This repository contains the complete design files for a high-efficiency **DC-DC Boost Converter** based on the **Texas Instruments LM2587** Simple Switcher® flyback regulator. The project focuses on robust power delivery, efficient thermal management, and an optimized PCB layout.
 
-Input Voltage Range: 4V to 40V
+---
 
-Output Voltage: Adjustable (Up to 60V based on feedback resistors)
+## 🛠 Technical Specifications
 
-Switch Current: 5.0 A (Internal NPN Switch)
+The LM2587 integrated circuit provides all active functions for step-up (boost), flyback, and forward converter switching regulators.
 
-Switching Frequency: 100 kHz (Internal Oscillator)
+* **Input Voltage Range:** 4V to 40V
+* **Output Voltage:** Adjustable (Up to 60V via feedback resistor network)
+* **Switch Current:** 5.0 A (Internal NPN Switch)
+* **Switching Frequency:** 100 kHz (Internal Oscillator)
+* **Protection Features:** Thermal shutdown and current limiting
+* **Topology:** Boost (Step-up)
 
-Protection: Thermal shutdown and current limiting
+---
 
-Topology: Boost (Step-up)
+## 🚀 Design Highlights & Engineering Considerations
 
-🚀 Key Features of This Design
-Optimized Power Path: The PCB layout is designed with wide copper traces to handle high current paths and minimize parasitic inductance.
+* **Power Integrity:** Optimized copper trace widths for high-current paths to minimize voltage drops and parasitic inductance.
+* **Thermal Management:** Implementation of dedicated copper pours and thermal vias under the LM2587 to ensure stable operation under load.
+* **EMI/EMC Optimization:** The high-current loop (Input Cap -> Inductor -> Diode -> Output Cap) has been kept as compact as possible to reduce electromagnetic interference.
+* **Signal Integrity:** Feedback traces are routed away from the switching node (inductor and switch pin) to prevent noise injection into the control loop.
 
-Thermal Management: Large copper pours and thermal vias are implemented to ensure efficient heat dissipation from the LM2587 IC.
+---
 
-Output Stability: High-quality output capacitors (ESR considerations) and a precise feedback loop for low ripple voltage.
+## 📁 Project Structure
 
-EMI/EMC Considerations: Compact loop design between the inductor, diode, and output capacitor to reduce electromagnetic interference.
+* **/Project Outputs:** Manufacturing files including Gerbers and NC Drill files.
+* **/Schematics:** Detailed circuit diagrams designed in Altium Designer.
+* **/PCB Layout:** 2-layer optimized PCB design with dedicated ground planes.
+* **/BOM:** Bill of Materials with manufacturer part numbers and footprints.
 
-📁 Project Structure
-/Project Outputs: Manufacturing files (Gerber, NC Drill).
+---
 
-/Schematics: Detailed circuit diagrams in Altium format.
+## 💻 Tools Used
 
-/PCB Layout: 2-layer PCB design with optimized ground planes.
+* **ECAD Software:** Altium Designer
+* **Simulation:** TI WEBENCH / LTSpice
+* **Documentation:** Markdown
 
-/BOM: Bill of Materials including component values and footprints.
+---
 
-💻 Tools Used
-Design Software: Altium Designer
-
-Simulation (Optional): LTSpice / TI WEBENCH
-
-Documentation: Markdown
