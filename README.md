@@ -41,5 +41,5 @@ The LM2587 integrated circuit provides all active functions for step-up (boost),
 * **Simulation:** TI WEBENCH / LTSpice
 * **Documentation:** Markdown
 
----
+
 
